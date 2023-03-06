@@ -1,0 +1,6 @@
+chmod u+x 101
+git add .
+git commit -m '101-crackme_password'
+git push
+sehsekou98
+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
