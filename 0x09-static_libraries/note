@@ -4,3 +4,4 @@ ctrated all of the c files with vi.
 gcc -c *.c is used to create all of my .o files
 ar rcs libmy.a is used to create my libmy.a file
 ar rcs libmy.a *.o is used to copy all of the .o files into my libmy.a file.
+chmod u+x command to exchucatable file
