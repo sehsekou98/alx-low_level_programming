@@ -8,38 +8,38 @@
  * Return: sum of data or 0
  */
 
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int add, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *age_n, *curr;
+	listint_t *new_n, *curr;
 	unsigned int index;
 
 	if (!head)
 		return (NULL);
 
-	if (add == 0)
+	if (idx == 0)
 	{
-		age_n = malloc(sizeof(listint_t));
-		if (age_n == NULL)
+		new_n = malloc(sizeof(listint_t));
+		if (new_n == NULL)
 			return (NULL);
-		age_n->n = n;
-		age_n->next = *head;
-		*head = age_n;
-		return (age_n);
+		new_n->n = n;
+		new_n->next = *head;
+		*head = new_n;
+		return (new_n);
 	}
 
 	curr = *head;
 
-	for (index = 0; index < add - 1 && curr; index++)
+	for (index = 0; index < idx - 1 && curr; index++)
 		curr = curr->next;
 
 	if (!curr)
 		return (NULL);
 
-	age_n = malloc(sizeof(listint_t));
-	if (age_n == NULL)
+	new_n = malloc(sizeof(listint_t));
+	if (new_n == NULL)
 		return (NULL);
-	age_n->n = n;
-	age_n->next = curr->next;
-	curr->next = age_n;
-	return (age_n);
+	new_n->n = n;
+	new_n->next = curr->next;
+	curr->next = new_n;
+	return (new_n);
 }
