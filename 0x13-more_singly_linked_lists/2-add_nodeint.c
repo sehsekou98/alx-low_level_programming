@@ -20,7 +20,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
         age_n->n = n;
         age_n->next = *head;
-        *head = new_n;
+        *head = age_n;
 
         return (age_n);
 }
