@@ -7,19 +7,19 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *time;
-	size_t age = 0;
+	const listint_t *tmp;
+	size_t ans = 0;
 
 	if (head != NULL)
 	{
 		while (head)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
-			age++;
-			time = head;
+			ans++;
+			tmp = head;
 			head = head->next;
 
-			if (time <= head)
+			if (tmp <= head)
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
 				exit(98);
@@ -27,5 +27,5 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
-	return (age);
+	return (ans);
 }
