@@ -8,28 +8,28 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *age_n, *curr;
+	listint_t *new_n, *curr;
 
 	if (head == NULL)
 		return (NULL);
 
-	age_n = malloc(sizeof(listint_t));
+	new_n = malloc(sizeof(listint_t));
 
-	if (age_n == NULL)
+	if (new_n == NULL)
 		return (NULL);
 
-        age_n->n = n;
-	age_n->next = NULL;
+	new_n->n = n;
+	new_n->next = NULL;
 
 	if (*head == NULL)
-		*head = age_n;
+		*head = new_n;
 	else
 	{
 		curr = *head;
 		while (curr->next != NULL)
 			curr = curr->next;
-		curr->next = age_n;
+		curr->next = new_n;
 	}
 
-	return (age_n);
+	return (new_n);
 }
