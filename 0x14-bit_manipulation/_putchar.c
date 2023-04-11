@@ -1,7 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 
-/*
+/**
  * _putchat - write the charter c
  * @c: the character to print
  * RETURN: on success 1

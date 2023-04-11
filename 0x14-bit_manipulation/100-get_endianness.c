@@ -9,8 +9,8 @@ int get_endianness(void)
 {
 	unsigned int sum = 1;
 
-	char *ptrc = (char *) &sum;
+	char*c = (char*) &sum;
 
-	return(*ptrc);
+	return(*c);
 }
 
