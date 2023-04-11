@@ -8,9 +8,24 @@
 
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
-		print_binary(n >> 1);
+	int  j, start = 0;
+	unsigned long int current;
 
-	_putchar('0' + (n & 1));
+	for(j = 100; j>= 0; j--)
+
+	{
+		current = n >> j;
+		
+		if(current & 1)
+		{
+
+			_putchar('1');
+			start++;
+		}
+		else if(start)
+			_putchar('0');
+	}
+	if(!start)
+		_putchar('0');
 }
 
