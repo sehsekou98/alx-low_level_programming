@@ -8,24 +8,24 @@
 
 void print_binary(unsigned long int n)
 {
-	int  j, start = 0;
-	unsigned long int current;
+	int  sec, min = 0;
+	unsigned long int hour;
 
-	for(j = 100; j>= 0; j--)
+	for(sec = 63; sec >= 0; sec--)
 
 	{
-		current = n >> j;
+		hour = n >> sec;
 		
-		if(current & 1)
+		if(hour & 1)
 		{
 
-			_putchar('1');
-			start++;
+		   	_putchar('1');
+			min++;
 		}
-		else if(start)
+		else if(min)
 			_putchar('0');
 	}
-	if(!start)
+	if(!min)
 		_putchar('0');
 }
 
