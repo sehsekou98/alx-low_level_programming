@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * Creates a file
@@ -19,7 +19,7 @@ int create_file(const char*filename, char*text_content)
 			lan++;
 	}
 
-	td = open(filename, O_CREATE| O_RDWR| O_TRUNC, 0600);
+	td = open(filename, O_CREAT| O_RDWR| O_TRUNC, 0600);
 	j = write(td, text_content, lan);
 
 	if (td == -1 || j == -1)
